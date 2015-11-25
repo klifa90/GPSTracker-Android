@@ -1,4 +1,4 @@
-package com.fsendra.alnorte;
+package com.klifa.GPSTrackerS;
 
 import android.app.AlertDialog;
 import android.content.Context;
