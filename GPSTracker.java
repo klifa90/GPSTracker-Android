@@ -65,17 +65,7 @@ public class GPSTracker {
             isNetworkEnabled = locationManager
                     .isProviderEnabled(LocationManager.NETWORK_PROVIDER);
 					
-			//PARA CRITERIA CUSTOMIZABLE
-            /*final Criteria criteria = new Criteria();
-            criteria.setAccuracy(Criteria.ACCURACY_FINE);
-            criteria.setSpeedRequired(true);
-            criteria.setAltitudeRequired(false);
-            criteria.setBearingRequired(false);
-            criteria.setCostAllowed(true);
-
-            final String bestProvider = locationManager.getBestProvider(criteria, true);
-
-            locationManager.requestLocationUpdates(bestProvider, 1, 0.0f, this);*/
+			//Define custom criteria here
  
             if (!isGPSEnabled && !isNetworkEnabled) {
                 // no network provider is enabled
