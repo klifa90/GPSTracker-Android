@@ -11,16 +11,17 @@ Include permissions
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />    
     <uses-permission android:name="android.permission.INTERNET" />
  
-
+## Custom Criteria
+ 
 For a custom criteria, define:
 
-			final Criteria criteria = new Criteria();
-            criteria.setAccuracy(Criteria.ACCURACY_FINE);
-            criteria.setSpeedRequired(true);
-            criteria.setAltitudeRequired(false);
-            criteria.setBearingRequired(false);
-            criteria.setCostAllowed(true);
+	final Criteria criteria = new Criteria();
+	criteria.setAccuracy(Criteria.ACCURACY_FINE);
+	criteria.setSpeedRequired(true);
+	criteria.setAltitudeRequired(false);
+	criteria.setBearingRequired(false);
+	criteria.setCostAllowed(true);
 
-            final String bestProvider = locationManager.getBestProvider(criteria, true);
+	final String bestProvider = locationManager.getBestProvider(criteria, true);
 
-            locationManager.requestLocationUpdates(bestProvider, 1, 0.0f, this);
+	locationManager.requestLocationUpdates(bestProvider, 1, 0.0f, this);
